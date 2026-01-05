@@ -16,14 +16,15 @@ Tool for choosing piping and valve sizing based on fluid GPM. This is intended t
     alt="PIC Valve">
 </img>
 
-
+The only allowable input is fluid GPM. Pipe size is outputted in the line box and the text browser displays the corresponding Griswold valve based on a search table.
 
 
 {: .warning }
 Check with the AD team when using GPMs outside of normal ranges, particularily with valve sizes above 10".
 
 
-{: .note}
+{: .note }
 Valve ranges are in the range of 0.5" to 10". Roughly this translate to 7.6-1600 GPM. 
 
 #### Code
+--- 
