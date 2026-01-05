@@ -33,6 +33,7 @@ $$\text{Inner Diameter} = \sqrt{\frac{Q * 144}{v * \frac{\pi}{4} * 448.86}}$$
 #### Code
 --- 
 Piping sizes are pulled based on the following table:
+<div class = "code-example" markdown = "1">
 |Pipe Size      | Griswold Valve          | Griswold Rating | Ashrae Rating| 
 |:-------------|:------------------|:---------|:--- |
 |0.5 | PICV0 | 7 | 7.6 |
