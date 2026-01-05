@@ -5,7 +5,7 @@ parent: Home
 nav-order: 1
 ---
 
-### *<p style="text-align:center;">Test Center UI - Didact</p>*
+### *Test Center UI - Didact*
 
 
 This works

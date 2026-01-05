@@ -4,7 +4,7 @@ layout: home
 parent: Home
 nav-order: 1
 ---
-## *<p style="text-align:center;">AD MultiTool - Leatherman</p>*
+## *AD MultiTool - Leatherman*
 --- 
 #### <u> Basic Panel Foam Calculator</u>
 
