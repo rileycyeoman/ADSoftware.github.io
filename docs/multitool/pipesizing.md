@@ -16,24 +16,29 @@ Tool for choosing piping and valve sizing based on fluid GPM. This is intended t
   alt="PIC Valve">
 
 The only allowable input is fluid GPM. Pipe size is outputted in the line box and the text browser displays the corresponding Griswold valve based on a search table.
-IS THIS UPDATING
+
 
 {: .warning }
->Check with the AD team when using GPMs outside of normal ranges, particularily with valve sizes above 10".
+>Check with the AD team when using GPMs outside of normal ranges, particularily with valve sizes above 10". The velocity output will turn yellow to indicate a value of above 8fps or below 3fps as this is the recommended range for pipe flow.
 
 
 {: .note }
->Valve ranges are in the range of 0.5" to 10". Roughly this translate to 7.6-1600 GPM. 
+>Valve ranges are in the range of 0.5" to 10". Roughly this translate to 0-1220 GPM. 
 
 #### Formulas
 ---
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-$$\text{Velocity} =\frac{Q * 144}{D^2 * \frac{\pi}{4} * 448.86}$$
-Where Q = input GPM and D = pipe diameter. 
+$$
+\text{Velocity} =\frac{Q * 144}{D^2 * \frac{\pi}{4} * 448.86}
+$$
+
+
+Where Q = input GPM and D = pipe diameter. 144 and 448.86 are used to convert to feet per second from gallons per minute.
 #### Code
 --- 
 Piping sizes are pulled based on the following table:
-{: .code-example }
+
 |Pipe Size      | Griswold Valve          | Griswold Rating | Ashrae Rating| 
 |:-------------|:------------------|:---------|:--- |
 |0.5 | PICV0 | 7  | 7.6 |
@@ -62,15 +67,20 @@ Piping sizes are pulled based on the following table:
 |10.0 | MVP62 | 1220 | 1600 |
 
 
+The following logic is used to determine which pipe size to use:
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+  mermaid.initialize({ startOnLoad: true });
+</script>
 
-
-::: mermaid
-graph TD;
-    A(Input GPM)
-    A-->B{Is GPM less than current row ASHRAE value?};
-    B-->|Yes|D{Is GPM less than current row Griswold value?};
+{% mermaid %}
+flowchart TD;
+    A(Input GPM);
+    A-->G(Start at first row);
+    G-->B([Is GPM less than current row ASHRAE value?]);
+    B-->|Yes|D([Is GPM less than current row Griswold value?]);
     D-->|Yes|E(Select current row's pipe);
     B-->|No|F(Move to next row);
     F-->B;
     D-->|No|F;
-:::
+{% endmermaid %}

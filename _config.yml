@@ -24,16 +24,13 @@ callouts:
     title: Warning
     color: red
 
-
 plugins:
-  - jekyll-seo-tag
-  - jekyll-github-metadata
-  - jekyll-include-cache
-  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-mermaid
+
+mermaid:
+  src: 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'
 
 just_the_docs:
   math: mathjax
-
-mermaid:
-  version: "11.12.2"
-  path: "/assets/js/mermaid.esm.min.mjs"
+mathjax: true
