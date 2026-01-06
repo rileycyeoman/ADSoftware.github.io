@@ -25,6 +25,12 @@ callouts:
     color: red
 
 
+plugins:
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+  - jekyll-include-cache
+  - jekyll-sitemap
+
 mermaid:
   version: "11.12.2"
   path: "/assets/js/mermaid.esm.min.mjs"
