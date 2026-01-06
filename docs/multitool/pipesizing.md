@@ -9,15 +9,12 @@ nav-order: 4
 
 ---
 Tool for choosing piping and valve sizing based on fluid GPM. This is intended to be used by sales as a means of providing AD-approved valve sizing.  
-<div class = "code-example" markdown = "1">
-<img 
-    style="display: block; 
-           margin-left: auto;
-           margin-right: auto;"
-    src="/images/valve.png" 
-    alt="PIC Valve">
-</img>
-</div>
+
+<img
+  style="display:block;margin-left:auto;margin-right:auto;"
+  src="{{ site.baseurl }}/images/valve.png"
+  alt="PIC Valve">
+
 The only allowable input is fluid GPM. Pipe size is outputted in the line box and the text browser displays the corresponding Griswold valve based on a search table.
 
 
@@ -36,7 +33,7 @@ Where Q = input GPM and D = pipe diameter.
 #### Code
 --- 
 Piping sizes are pulled based on the following table:
-<div class = "code-example" markdown = "1">
+{: .code-example }
 |Pipe Size      | Griswold Valve          | Griswold Rating | Ashrae Rating| 
 |:-------------|:------------------|:---------|:--- |
 |0.5 | PICV0 | 7  | 7.6 |
@@ -64,7 +61,6 @@ Piping sizes are pulled based on the following table:
 |8.0 | MVP62 | 1220 | 1100 |
 |10.0 | MVP62 | 1220 | 1600 |
 
-</div>
 
 
 
