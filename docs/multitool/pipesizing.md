@@ -5,7 +5,7 @@ parent: MultiTool
 nav-order: 4
 ---
 {: .text-center }
-### Valve Sizing Tool
+### <u>Valve Sizing Tool</u>
 
 ---
 Tool for choosing piping and valve sizing based on fluid GPM. This is intended to be used by sales as a means of providing AD-approved valve sizing.  
@@ -52,33 +52,34 @@ The constants **144** and **448.86** convert the result from gallons per minute 
 #### Code
 --- 
 Piping sizes are pulled based on the following table:
-
+<div class="datatable-begin"></div>
 |Pipe Size|	Griswold Valve	|Griswold Rating	|ASHRAE Rating|
-|:-------------|:------------------|:---------|:--- |
+|:----------|:------------|:---------|:--- |
 |0.5|	PICV0|	7	|5.75|
 |0.75	|PICV0	|15	|12.3|
 |1.0|	PICV0|	15	|20.5|
 |1.0|	PICV1|	30|	20.5|
 |1.25|	PICV1|	35|	31.2|
-|1.5	|PICV1	|35	|44.2|
-|1.5	|PICV2	|85	|44.2|
-|2.0	|PICV2	|85	|76.2|
+|1.5|PICV1	|35	|44.2|
+|1.5|PICV2	|85	|44.2|
+|2.0|PICV2	|85	|76.2|
 |2.5|	PICV2	|95	|110|
-|2.5	|MVP31	|113	|110|
-|3.0	|PICV2	|95	|170|
-|3.0	|MVP31	|113|	170|
-|3.0	|MVP32	|157|	170|
-|3.0	|MVP41	|149|	170|
-|3.0	|MVP42	|225	|170|
-|4.0	|MVP41	|149	|320|
-|4.0	|MVP42	|225	|320|
-|4.0	|MVP43	|320|320|
-|5.0	|MVP51	|369	|370|
-|5.0	|MVP52	|468	|370|
-|6.0	|MVP51	|369	|660|
-|6.0	|MVP52	|468	|660|
-|8.0	|MVP62	|1220|	1100|
-|10.0	|MVP62	|1220|	1600|
+|2.5|MVP31	|113	|110|
+|3.0|PICV2	|95	|170|
+|3.0|MVP31	|113|	170|
+|3.0|MVP32	|157|	170|
+|3.0|MVP41	|149|	170|
+|3.0|MVP42	|225	|170|
+|4.0|MVP41	|149	|320|
+|4.0|MVP42	|225	|320|
+|4.0|MVP43	|320|320|
+|5.0|MVP51	|369	|370|
+|5.0|MVP52	|468	|370|
+|6.0|MVP51	|369	|660|
+|6.0|MVP52	|468	|660|
+|8.0|MVP62	|1220|	1100|
+|10.0|MVP62	|1220|	1600|
+<div class="datatable-end"></div>
 The following logic is used to determine which pipe size to use:
 <script type="module">
   import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
