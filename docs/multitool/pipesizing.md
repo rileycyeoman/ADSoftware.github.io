@@ -27,14 +27,28 @@ The only allowable input is fluid GPM. Pipe size is outputted in the line box an
 
 #### Formulas
 ---
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  }
+};
+</script>
 
+<script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+  async>
+</script>
 $$
-\text{Velocity} =\frac{Q * 144}{D^2 * \frac{\pi}{4} * 448.86}
+\text{Velocity} = \frac{Q * 144}{D^2 * \frac{\pi}{4} * 448.86}
 $$
 
 
-Where Q = input GPM and D = pipe diameter. 144 and 448.86 are used to convert to feet per second from gallons per minute.
+Where:  
+- **Q** = flow rate (GPM)  
+- **D** = pipe diameter (inches)  
+The constants **144** and **448.86** convert the result from gallons per minute to feet per second.
 #### Code
 --- 
 Piping sizes are pulled based on the following table:
