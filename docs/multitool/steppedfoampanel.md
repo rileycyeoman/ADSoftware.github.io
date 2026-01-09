@@ -45,8 +45,12 @@ $$
 \end{cases}
 $$
 - Depth of outer panel: $\text{outer\_depth} = 1.138\text{"}$ 
-- Offset $= 0.255\text{"}$, Distance from inner to outer panel
-- $cut\_out =  4 * 17.4 in^2$. Cutout of sheet metal, this is the total surface area of hypothetical rectangular sheet metal minus the true value. This is essentially the sheet metal minus the corners.
+- Offset $= 0.255$", Distance from inner to outer panel
+- $\text{cut\_out} =  4 * 17.4 in^2$. Cutout of sheet metal, this is the total surface area of hypothetical rectangular sheet metal minus the true value. This is essentially the sheet metal minus the corners, represented in the shaded area of the following image:
+<img
+  style="display:block;margin-left:auto;margin-right:auto;"
+  src="{{ site.baseurl }}/images/cutout.png"
+  alt="Sheet Metal Cutout">
 
 
 

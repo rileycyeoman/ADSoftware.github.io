@@ -47,34 +47,38 @@ $$
 
 Where:  
 - **Q** = flow rate (GPM)  
-- **D** = pipe inner diameter (inches)  
+- **D** = pipe inner diameter (in)  
 The constants **144** and **448.86** convert the result from gallons per minute to feet per second.
 
 {: .note }
 >Pipe sizes are shown in nominal size, but for calculations, inner diameter is used. Nominal size is what the manufacturer specifies first, inner diameter is what calculates flow and velocity.
 
 
-The nominal size and respective inner diameter are shown below: 
+The nominal size and respective inner and outer diameters are shown below: 
 <img
   style="display:block;margin-left:auto;margin-right:auto;"
   src="{{ site.baseurl }}/images/pipesizing.png"
   alt="Pipe Sizing">
 
-|Nominal Size|	Inner Diameter	|Outer Diameter|
-|:----------|:------------|:---------|
-|0.5|	0.545|	0.625	|
-|0.75	|	.785| .875	|
-|1.0|	1.025|	1.125	|
-|1.25|1.265	|1.625	|	
-|1.5|1.505	| 1.625	|
-|2.0|	1.985|2.125	|
-|2.5|	2.465	|2.625	|
-|3.0|	2.945|	3.125|
-|4.0|	3.905|4.125|
-|5.0|	4.875|5.125|
-|6.0|	5.845|6.125|
-|8.0|	7.725|8.125|
-|10.0|9.625|10.125|
+|Copper Nominal Size|	Inner Diameter	|Outer Diameter| Weight of Tube (lb/ft)|Weight of Tube & Water (lb/ft)|
+|:----------|:------------|:---------| :------|
+|0.5|	0.545|	0.625	| 0.285| 0.386|
+|0.75	|	.785| .875	|0.455 |0.664|
+|1.0|	1.025|	1.125	|0.655|1.01|
+|1.25|1.265	|1.625	|	0.884|1.43|
+|1.5|1.505	| 1.625	|1.14|1.91|
+|2.0|	1.985|2.125	|1.75|3.09|
+|2.5|	2.465	|2.625	|2.48|4.54|
+|3.0|	2.945|	3.125|3.33|6.27|
+|4.0|	3.905|4.125|5.38|10.1|
+|5.0|	4.875|5.125|7.61|15.7|
+|6.0|	5.845|6.125|10.2|21.8|
+|8.0|	7.725|8.125|19.3|39.6|
+|10.0|9.625|10.125|30.1|61.6|
+
+
+
+
 
 
 
@@ -119,6 +123,7 @@ The following logic is used to determine which pipe size to use:
 {% mermaid %}
 flowchart TD;
     A(Input GPM);
+    A-->|GPM > Max GPM|L(Too High Warning);
     A-->G(Start at first row);
     G-->B([Is GPM less than current row ASHRAE value?]);
     B-->|Yes|D([Is GPM less than current row Griswold value?]);
@@ -126,6 +131,11 @@ flowchart TD;
     B-->|No|F(Move to next row);
     F-->B;
     D-->|No|F;
+    E-->H(Calculate FPS);
+    E-->M(Recommended Selected Row Valve);
+    H-->|FPS>8|I(Too High Warning);
+    H-->|FPS<3|J(Too Low Warning);
+    H-->|FPS>=3 & FPS<=8|K(OK);
 {% endmermaid %}
 
 
