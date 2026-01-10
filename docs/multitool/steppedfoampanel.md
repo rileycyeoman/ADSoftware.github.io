@@ -25,6 +25,7 @@ window.MathJax = {
   }
 };
 </script>
+<<<<<<< Updated upstream
 
 <script
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
@@ -52,7 +53,21 @@ $$
   src="{{ site.baseurl }}/images/cutout.png"
   alt="Sheet Metal Cutout">
 
+=======
+>>>>>>> Stashed changes
 
+<script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+  async>
+</script>
+The following are the current variables that are kept constant in the code:
+- Steel Density: $\rho_{steel} = 0.284\frac{lb}{in^3}$ 
+- Steel Gauge: $22ga = 0.03in$
+- $\text{Thickness} = 2 * Gauge$, Both sides of panel to be subtracted from length  
+- Foam Density : $\rho_{Foam} = 2.5$
+- Foam Ratio: 0.47
+- Gasket Cost: $\$0.7$ per ft
+- Foam Price: $\$3.01$ per pound
 
 #### Formulas
 ---
