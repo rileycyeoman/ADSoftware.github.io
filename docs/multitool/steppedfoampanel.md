@@ -43,7 +43,7 @@ The following are the current variables that are kept constant in the code:
 - Unpainted Sheet Metal Cost: $1.05  \text{ per } ft^2$
 - Painted Sheet Metal Cost: $ 1.47 \text{ per } ft^2$
 - $\text{Thickness} = 2 * Gauge$, Both sides of panel to be subtracted from length  
-- Foam Ratio: $ ratio = 0.47$
+- - Foam Ratio: $r = 0.47$
 -  Flange Length:
 $$
 \text{Inner Flange} = \begin{cases}
@@ -52,9 +52,11 @@ $$
     2.64\text{"} & \text{if } Depth = 4\text{"} 
 \end{cases}
 $$
-- Depth of outer panel: $\text{outer\_depth} = 1.138\text{"}$. Because the inner panel is modular but not the outer, this value remains constant. 
+
+
+- Depth of outer panel: $d_{\text{outer}} = 1.138\text{"}$. Because the inner panel is modular but not the outer, this value remains constant. 
 - Offset $= 0.255$", Distance from inner to outer panel
-- $\text{cut_out} =  4 * 17.4 in^2$. Cutout of sheet metal, this is the total surface area of hypothetical rectangular sheet metal minus the true value. This is essentially the sheet metal minus the corners, represented in the shaded area of the following image:
+- $\text{cutout} = 4 * 17.4\ \text{in}^2$. Cutout of sheet metal, this is the total surface area of hypothetical rectangular sheet metal minus the true value. This is essentially the sheet metal minus the corners, represented in the shaded area of the following image:
 <img
   style="display:block;margin-left:auto;margin-right:auto;"
   src="{{ site.baseurl }}/images/cutout.png"
