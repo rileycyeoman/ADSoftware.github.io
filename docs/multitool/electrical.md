@@ -78,7 +78,7 @@ $$
 $$
 
 
-If QTY FANS $\geq 10$ and the unit is EC+, we use the following calculation:
+If the unit is MSP, QTY FANS $\geq 10$, and the unit is EC+, we use the following calculation:
 
 $$
 \text{Connection Sets } = \frac{n + 4}{5}\\ 
