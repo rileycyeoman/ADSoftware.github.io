@@ -2,7 +2,7 @@
 title: Didact
 layout: home
 parent: Home
-nav-order: 1
+nav-order: 2
 ---
 
 ### *Test Center UI - Didact*

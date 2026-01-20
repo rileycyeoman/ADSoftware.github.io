@@ -99,17 +99,33 @@ $$\text{Surface Inner} = (\text{Inner Length} + \text{Thickness}) * (\text{Inner
 
 <u>Weights</u><br>
 
-$$\text{Outer Weight} = \text{Surface Outer} * \rho_{steel} * \text{Gauge}$$
+$$
 
-$$\text{Inner Weight} = \text{Surface Inner} * \rho_{steel} * \text{Gauge}$$
+\text{Outer Weight} = \text{Surface Outer} * \rho_{steel} * \text{Gauge}\\ \\
 
-$$\text{Foam Weight} = \frac{Volume * \rho_{foam}}{\text{Price of Foam}}$$
+\text{Inner Weight} = \text{Surface Inner} * \rho_{steel} * \text{Gauge}\\ \\ 
+
+\text{Foam Weight} = \frac{Volume * \rho_{foam}}{\text{Price of Foam}}
+
+$$
 
 <u>Prices</u><br>
 
-$$\text{Panel Price} = \frac{\text{Surface Outer} * \text{Painted Price}}{144} + \frac{\text{Surface Inner} * \text{Unpainted Price}}{144}$$
 
-$$\text{Total Cost} = \text{Foam} * \text{Panel Price} * \text{Gasket Cost}$$
+$$
+\text{Gasket Cost} = \text{Foam} * \text{Panel Price} * \text{Gasket Cost} \\ \\
+\text{Panel Price} = \frac{\text{Surface Outer} * \text{Painted Price}}{144} + \frac{\text{Surface Inner} * \text{Unpainted Price}}{144} \\ \\
+\text{Total Cost} = \text{Foam} * \text{Panel Price} * \text{Gasket Cost}
+$$
+
+
+<u>Volumes</u><br>
+
+$$
+\text{Volume}_{\text{Inner}} = {Length}_{\text{Inner}} * {Width}_{\text{Inner}} * {Depth}_{\text{Inner}}  \\
+\text{Volume}_{\text{Outer}} = {Length}_{\text{Outer}} * {Width}_{\text{Outer}} * {Depth}_{\text{Outer}} \\
+\text{Volume}_{\text{Total}} = {Volume}_{\text{Outer}} + \text{Volume}_{\text{Inner}}
+$$
 
 <u>Shot Time</u><br>
 
