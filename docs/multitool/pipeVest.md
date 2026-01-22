@@ -35,8 +35,5 @@ installation conditions.
 ---
 
 {: .note }
-> **Tip:**  
-> Verify final pipe sizes and vestibule clearances against project and
-> installation specifications.
 
 ---

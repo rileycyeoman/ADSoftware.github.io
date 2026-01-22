@@ -79,7 +79,6 @@ A_{cut} = 2.657 × 8 = 21.256 \text{ in}^2
   - 3"
   - 4"
 - Negative internal dimensions are clamped to zero
-- Density and ratio default if user enters ≤ 0
 
 
 
